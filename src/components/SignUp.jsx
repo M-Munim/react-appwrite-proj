@@ -24,7 +24,6 @@ const SignUp = () => {
         } catch (error) {
             setError(error.message)
         }
-
     }
 
     return (
@@ -54,7 +53,7 @@ const SignUp = () => {
                     </p>
                 }
 
-                <form onSubmit={handleSubmit()}>
+                <form onSubmit={handleSubmit(create)}>
                     <div className="space-y-5">
                         <Input label="Full Name: "
                             placeholder='Enter your full name'
@@ -82,10 +81,10 @@ const SignUp = () => {
                             })}
                         />
 
-                        <button type='submit'
+                        <Button type='submit'
                             className='w-full'>
                             Create Account
-                        </button>
+                        </Button>
                     </div>
                 </form>
 
